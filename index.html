@@ -282,7 +282,7 @@
         <p class="waktu">TIME LEFT</p>
 
         <div class="timer">
-          <p>-:--s</p>
+          <p>-</p>
         </div>
         <div class="lifeline">
           <div class="lifelinein" id="fiftyFifty">
@@ -770,7 +770,7 @@
 
     // kekalahan waktu (lulus)
     let timer = document.querySelector(".timer p");
-    let time = 15;
+    let time = 30;
     const prizePool = [0, 1000000, 2000000, 5000000, 10000000, 20000000];
     const selectoption = (selectoption, answer) => {
       if (selectoption == answer && time > 0) {
@@ -798,7 +798,7 @@
         } else {
           alert("Jawaban bukan y atau n, dianggap lanjut.");
         }
-        time = 15;
+        time = 30;
       } else if (time <= 0) {
         clearInterval(settimer());
         showGameOverPopup("Game Over!","Waktu Habis,Uang Anda Hangus");
